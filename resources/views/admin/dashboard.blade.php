@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ph <!DOCTYPE html>
 
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
