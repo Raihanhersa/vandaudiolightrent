@@ -88,10 +88,10 @@ ph
 
           <ul class="menu-inner py-1">
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Menu</span></li>
-            <li class="menu-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-            <a href="{{ route('admin.dashboard') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-smile"></i>
-                <div class="text-truncate">Dashboard</div>
+           <li class="menu-item {{ request()->routeIs('admin.layanan.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.layanan.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-package"></i>
+                <div class="text-truncate">Kelola layanan</div>
             </a>
             </li>
           </ul>
