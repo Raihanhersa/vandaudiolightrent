@@ -11,9 +11,10 @@ class LayananController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+   public function index()
     {
-        return view('admin.layanan.index');
+    $data['dataLayanan'] = Layanan::all();
+    return view('admin.layanan.index', $data);
     }
 
     public function create()
@@ -49,9 +50,10 @@ class LayananController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+   public function edit(string $id)
     {
-        //
+    $data['dataLayanan'] = Layanan::findOrFail($id);
+    return view('admin.layanan.edit', $data);
     }
 
     /**
@@ -59,14 +61,29 @@ class LayananController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+    $layanan = Layanan::findOrFail($id);
+
+    $layanan->nama_layanan   = $request->nama_layanan;
+    $layanan->kategori       = $request->kategori;
+    $layanan->deskripsi      = $request->deskripsi;
+    $layanan->harga_per_hari = $request->harga_per_hari;
+    $layanan->stok           = $request->stok;
+    $layanan->status         = $request->status;
+    $layanan->save();
+
+    return redirect()->route('admin.layanan.index')
+        ->with('success', 'Perubahan Data Berhasil!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+   public function destroy(string $id)
     {
-        //
+    $layanan = Layanan::findOrFail($id);
+    $layanan->delete();
+
+    return redirect()->route('admin.layanan.index')
+        ->with('success', 'Hapus Data Berhasil!');
     }
 }

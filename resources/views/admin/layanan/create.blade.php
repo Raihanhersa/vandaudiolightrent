@@ -28,16 +28,7 @@
       </div>
 
 
-    <div class="mb-6">
-        <label class="form-label" for="kategori">Kategori</label>
-        <select class="form-select" id="kategori" name="kategori">
-            <option value="">Pilih kategori</option>
-            <option value="Sound System">Sound System</option>
-            <option value="Videotron">Videotron</option>
-            <option value="Lighting">Lighting</option>
-            <option value="Paket Lengkap">Paket Lengkap</option>
-        </select>
-    </div>
+    
 
     <div class="mb-6">
         <label class="form-label" for="harga_per_hari">Harga per Hari</label>
