@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin.app')
 @section('title', 'Tambah Layanan')
 
 @section('content')
@@ -28,7 +28,7 @@
       </div>
 
 
-    
+
 
     <div class="mb-6">
         <label class="form-label" for="harga_per_hari">Harga per Hari</label>
