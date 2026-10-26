@@ -21,41 +21,13 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="{{ asset('assets-user/css/tiny-slider.css') }}" rel="stylesheet">
 		<link href="{{ asset('assets-user/css/style.css') }}" rel="stylesheet">
-		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+		<title>Vand Audio Light Rent</title>
 	</head>
 
 	<body>
 
 		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
-
-			<div class="container">
-				<a class="navbar-brand" href="index.html">Vand Audio Light Rent<span>.</span></a>
-
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarsFurni">
-					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li><a class="nav-link" href="shop.html">Shop</a></li>
-						<li><a class="nav-link" href="about.html">About us</a></li>
-						<li><a class="nav-link" href="services.html">Services</a></li>
-						<li><a class="nav-link" href="blog.html">Blog</a></li>
-						<li><a class="nav-link" href="contact.html">Contact us</a></li>
-					</ul>
-
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="{{ asset('assets-user/images/user.svg') }}"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="{{ asset('assets-user/images/cart.svg') }}"></a></li>
-					</ul>
-				</div>
-			</div>
-
-		</nav>
+		@include('layouts.user.header')
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
@@ -64,15 +36,18 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>Sewa Sound, Videotron dan <span clsas="d-block">Lighting untuk acara Anda</span></h1>
-								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+								<h1>Sewa Sound, Videotron, dan <span clsas="d-block">Lighting untuk acara Anda</span></h1>
+								<p class="mb-4">Pesan Online, Bayar, dan Pantau dalam satu tempat.</p>
+								<p><a href="" class="btn btn-secondary me-2">Lihat Layanan</a><a href="#" class="btn btn-white-outline">Pesan Sekarang</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-								<img src="{{ asset('assets-user/images/couch.png') }}" class="img-fluid">
-							</div>
+							<div class="col-lg-7">
+                        <div class="hero-img-wrap">
+                            <img src="{{ asset('assets-user/images/alat.png') }}"
+                                class="img-fluid shadow-alat">
+                             </div>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -465,7 +440,10 @@
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
+						<div class="mb-4 footer-logo-wrap"><a href="/" class="footer-logo d-flex align-items-center">
+                        <img src="{{ asset('assets-user/images/vand.png') }}" alt="Vand Audio Light Rent" style="height:60px">
+                        <strong class="ms-2" style="font-size:24px">VandRent.</strong>
+                        </a>
 						<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
 
 						<ul class="list-unstyled custom-social">

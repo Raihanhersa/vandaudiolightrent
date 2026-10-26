@@ -12,7 +12,7 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        return view('user.beranda');
+        return view('user.home');
     }
 
     /**

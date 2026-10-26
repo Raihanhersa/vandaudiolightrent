@@ -1,11 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User\BerandaController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LayananController;
 use App\Http\Controllers\Admin\OperatorController;
 use App\Http\Controllers\Admin\RekeningController;
+use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\User\BerandaController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 
@@ -18,3 +19,8 @@ Route::resource('rekening', RekeningController::class)->except('show');
 });
 
 
+
+Route::get('/auth', [AuthController::class, 'index'])->name('login');
+Route::post('/auth', [AuthController::class, 'login'])->name('login.proses');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'registerProses'])->name('register.proses');
