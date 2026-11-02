@@ -9,4 +9,10 @@ class Layanan extends Model
     protected $table = 'layanan';
     protected $primaryKey = 'layanan_id';
     protected $fillable = ['nama_layanan', 'kategori', 'deskripsi', 'harga_per_hari', 'stok', 'status'];
+
+    public function portofolio()
+{
+    return $this->hasMany(Portofolio::class, 'layanan_id', 'layanan_id');
 }
+}
+
