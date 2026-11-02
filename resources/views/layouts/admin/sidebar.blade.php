@@ -44,6 +44,14 @@
         <div class="text-truncate">Kelola rekening</div>
       </a>
     </li>
+
+    <li class="menu-item {{ request()->routeIs('admin.jenis-acara.*') ? 'active' : '' }}">
+        <a href="{{ route('admin.jenis-acara.index') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-calendar"></i>
+            <div class="text-truncate">Jenis acara</div>
+        </a>
+    </li>
+
   </ul>
 </aside>
 <!-- / Menu -->
